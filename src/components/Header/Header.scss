@@ -1,0 +1,68 @@
+.header {
+  width: 100%;
+  height: var(--header-height);
+  padding: 24px 24px;
+  display: flex;
+  align-items: center;
+  color: var(--primary-color);
+
+  &__user-info-span {
+    font-weight: var(--font-weight-xl);
+  }
+
+  &__city-add-block{
+    display: flex;
+    align-items: center;
+    font-size: 28px;
+  }
+
+  &__city-add-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    min-height: 30px;
+    padding: 0 10px;
+    border: 1px solid var(--secondary-color);
+    border-radius: 8px;
+    background-color: transparent;
+    color: var(--primary-color);
+    transition: box-shadow .3s ease-in-out;
+    cursor: pointer;
+  }
+
+  &__city-add-button:hover {
+    box-shadow: 0 0 10px 1px var(--secondary-color);
+  }
+
+  &__city-add-button:focus {
+    border: none;
+    outline: 2px solid var(--primary-color);
+  }
+  
+  &__button-block {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    margin-left: auto;
+  }
+
+  &__logout-button {
+    background-color: transparent;
+    color: var(--primary-color);
+    border: none;
+    transition: box-shadow .3s ease-in-out, border-radius .3s ease-in-out;
+    cursor: pointer;
+  }
+
+  &__logout-button:hover {
+    border-radius: 8px;
+    box-shadow: 0 0 10px 1px var(--secondary-color);
+  }
+
+  &__logout-button:focus {
+    border-radius: 8px;
+    outline: 1px solid var(--secondary-color);
+  }
+}
