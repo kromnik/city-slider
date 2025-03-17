@@ -10,7 +10,7 @@ import "./styles/index.scss";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
-    <BrowserRouter>
+    <BrowserRouter basename={process.env.NODE_ENV === 'production' ? '/city-slider' : '/'}>
       <Provider store={store}>
         <ThemeProvider>
           <App />

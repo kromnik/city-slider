@@ -11,7 +11,7 @@ export default defineConfig({
       include: '**/*.svg',
     }),
   ],
-  base: "/city-slider/",
+  base: process.env.NODE_ENV === 'production' ? '/city-slider/' : '/',
   server: {
     open: true,
   },
