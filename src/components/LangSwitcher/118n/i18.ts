@@ -16,7 +16,7 @@ i18n
     },
 
     backend: {
-      loadPath: "/city-slider/locales/{{lng}}/{{ns}}.json",
+      loadPath: process.env.NODE_ENV === 'production' ? "/city-slider/locales/{{lng}}/{{ns}}.json" : "/locales/{{lng}}/{{ns}}.json",
     },
   });
 
