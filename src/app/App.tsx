@@ -1,9 +1,10 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
+import { useTheme } from "../components/ThemeSwitcher/useTheme";
 import Header from "../components/Header/Header";
 import Login from "../components/Login/Login";
 import Dashboard from "../components/Dashboard/Dashboard";
-import { useTheme } from "../components/ThemeSwitcher/useTheme";
+import PageNotFound from "../components/PageNotFound/PageNotFound";
 
 const App: React.FC = () => {
   const { theme } = useTheme();
@@ -15,6 +16,7 @@ const App: React.FC = () => {
         <Routes>
           <Route path="/" element={<Login />} />
           <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="*" element={<PageNotFound />} />  
         </Routes>
       </div>
     </div>

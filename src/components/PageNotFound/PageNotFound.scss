@@ -1,0 +1,43 @@
+.page-not-found {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: calc((75vh - var(--header-height)) / 2);
+  color: var(--primary-color);
+
+  &__title {
+    font: var(--font-xl);
+  }
+
+  &__message {
+    font: var(--font-m);
+    font-size: 18px;
+  }
+
+  &__button {
+    width: 68px;
+    height: 31px;
+    border-radius: 8px;
+    background-color: #000000;
+    color: var(--primary-color);
+    margin-top: 32px;
+    border: 1px solid var(--secondary-color);
+    transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
+    cursor: pointer;
+  }
+
+  &__button-light-color {
+    color: var(--secondary-color);
+  }
+
+  &__button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 10px 1px var(--secondary-color);
+  }
+  
+  &__button:focus {
+    border: none;
+    outline: 2px solid var(--primary-color);
+  }
+}
